@@ -15,12 +15,12 @@ const PORT = process.env.PORT || 8010;
 
 const app = express();
 
-// app.use(express.static("public"));
-// app.use(
-//   express.urlencoded({
-//     extended: true,
-//   })
-// );
+app.use(express.static("public"));
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
 
 // CHQ: the endpoint of URL/users returns the database entries in JSON format
 app.get("/users", async (req: any, res: any) => {
